@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <a
-        href="https://github.com/arthurseverino/Friendify"
+        href="https://github.com/Ismat-Samadov/Chat_App"
         target="_blank"
         rel="noopener noreferrer">
         <svg
