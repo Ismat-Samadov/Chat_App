@@ -1,0 +1,13 @@
+{
+    "name": "social-network",
+    "version": "1.0.0",
+    "description": "Live:",
+    "main": "app.js",
+    "scripts": {
+        "start": "cd backend && npm install && npm start",
+        "heroku-postbuild": "cd frontend && npm install && npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

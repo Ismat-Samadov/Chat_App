@@ -1,16 +1,25 @@
-add this environment variable to your deploy platform
-BUCKETEER_AWS_ACCESS_KEY_ID=
-BUCKETEER_AWS_SECRET_ACCESS_KEY=
-BUCKETEER_BUCKET_NAME=
-JWT_SECRET=
-MONGO_URL=
-NODE_ENV=
-PORT=3001
-VITE_APP_API_URL=
+# Chat App
 
-update AWS S3 BUCKET CORS and  Bucket policy
+This repository contains the source code for a chat application.
 
-CORS: 
+## Environment Variables
+
+Before deploying the application, make sure to add the following environment variables to your deployment platform:
+
+- `BUCKETEER_AWS_ACCESS_KEY_ID=` _(Your AWS Access Key ID)_
+- `BUCKETEER_AWS_SECRET_ACCESS_KEY=` _(Your AWS Secret Access Key)_
+- `BUCKETEER_BUCKET_NAME=` _(Your AWS S3 Bucket Name)_
+- `JWT_SECRET=` _(Your JWT Secret for authentication)_
+- `MONGO_URL=` _(URL for your MongoDB database)_
+- `NODE_ENV=` _(Environment mode: "production" or "development")_
+- `PORT=3001` _(Port number for the server)_
+- `VITE_APP_API_URL=` _(URL for your API endpoint)_
+
+## AWS S3 Configuration
+
+### CORS Configuration:
+
+```json
 [
     {
         "AllowedHeaders": [
@@ -30,8 +39,11 @@ CORS:
         "MaxAgeSeconds": 3000
     }
 ]
+```
 
-Bucket policy:
+### Bucket Policy:
+
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -44,3 +56,8 @@ Bucket policy:
     }
   ]
 }
+```
+
+---
+
+Make sure to replace the placeholder values with your actual credentials and configuration details before deploying the application.
